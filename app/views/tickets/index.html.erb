@@ -1,0 +1,9 @@
+<%- model_class = Ticket.new.class -%>
+<div class="page-header">
+  <h1><%=t '.title', :default => model_class.model_name.human.pluralize %></h1>
+</div>
+<%= render :partial => 'tickets', :locals => {:tickets => @tickets, :model_class => model_class, :show_customer => true} %>
+
+<%= link_to t('.new', :default => t("helpers.links.new")),
+            new_ticket_path,
+            :class => 'btn btn-primary' %>
