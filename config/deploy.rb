@@ -18,6 +18,7 @@ set :repository,  "git@github.com:kairo77/repair-shop.git"
 set :branch, 'master'
 set :scm_verbose, true
 ssh_options[:forward_agent] = true
+ssh_options[:keys] = [File.join(ENV["HOME"], ".ssh", "id_rsa_thor")]
 
 role :web, domain
 role :app, domain
