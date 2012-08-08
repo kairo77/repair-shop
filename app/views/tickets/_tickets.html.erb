@@ -15,7 +15,7 @@
     <% tickets.each do |ticket| %>
       <tr data-url="<%= ticket_path(ticket) %>">
         <%- if show_customer == true -%>
-          <td><%= ticket.customer.name %></td>
+          <td><%= ticket.customer.try(:name) %></td>
         <%- end -%>
         <td><%= ticket.closed %></td>
         <td><%= ticket.manufacturer %></td>
