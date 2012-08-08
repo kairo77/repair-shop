@@ -48,9 +48,8 @@ namespace :deploy do
     run "ln -nfs #{shared_path}/assets #{release_path}/public/assets"
   end
   
-  desc "Sync the public/assets directory and database.yml"
+  desc "Sync database.yml"
   task :assets do
-    system "rsync -vr --exclude='.DS_Store' public/assets #{user}@#{application}:#{shared_path}/"
     put File.read("config/database.yml"), "#{shared_path}/config/database.yml"
   end
 end
