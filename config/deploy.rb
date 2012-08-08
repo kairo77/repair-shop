@@ -14,7 +14,7 @@ set :application, 'repair.mooo.com'
 set :applicationdir, "/home/thor/repair_shop"
 
 set :scm, :git
-set :repository,  "git@github.com:kairo77/repair-shop.git"
+set :repository,  "https://github.com/kairo77/repair-shop.git"
 set :branch, 'master'
 set :scm_verbose, true
 ssh_options[:forward_agent] = true
