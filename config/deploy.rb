@@ -19,7 +19,6 @@ set :branch, 'master'
 set :scm_verbose, true
 ssh_options[:forward_agent] = true
 ssh_options[:keys] = [File.join(ENV["HOME"], ".ssh", "id_rsa_thor")]
-set :port, 2288
 
 role :web, domain
 role :app, domain
